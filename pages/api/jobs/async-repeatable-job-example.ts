@@ -1,10 +1,7 @@
 import { RepeatableJob } from "@dwayneyuen/next-jobs";
 
-const AsyncRepeatableJobExample = RepeatableJob(
-  { cron: "* * * * *" },
-  async () => {
-    console.log("[AsyncRepeatableJobExample.callback] callback executed");
-  }
-);
+const AsyncRepeatableJobExample = RepeatableJob("* * * * *", async () => {
+  console.log("[AsyncRepeatableJobExample.callback] callback executed");
+});
 
 export default AsyncRepeatableJobExample;
