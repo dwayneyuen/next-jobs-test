@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3003",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@dwayneyuen/next-jobs": "^0.0.3",
-    "@dwwayneyuen/next-jobs-server": "file:../next-jobs/server",
+    "@dwayneyuen/next-jobs": "file:../next-jobs/sdk",
     "next": "^12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "winston": "^3.7.2"
   },
   "devDependencies": {
     "@types/node": "17.0.34",
