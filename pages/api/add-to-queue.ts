@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import QueueExample from "./queues/queue-example";
+import QueueExample from "./jobs/queues/queue-example";
 
 const AddToQueue = async (req: NextApiRequest, res: NextApiResponse) => {
   await QueueExample.add({ foo: "bar" });

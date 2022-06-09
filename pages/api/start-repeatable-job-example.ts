@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import RepeatableJobExample from "./jobs/repeatable-job-example";
+import RepeatableJobExample from "./jobs/scheduled/repeatable-job-example";
 
 const StartRepeatableJobExample = async (
   req: NextApiRequest,

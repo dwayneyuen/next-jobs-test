@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateQueueDto {
+  name: String!
+  path: String!
+}
+
+input CreateScheduledJobDto {
+  name: String!
+  path: String!
+  schedule: String!
+}
+
+type Mutation {
+  createQueues(accessToken: String!, queues: [CreateQueueDto!]!): Result!
+  createScheduledJobs(accessToken: String!, jobs: [CreateScheduledJobDto!]!): Result!
+  enqueueJob(accessToken: String!, data: String!, queueName: String!): Result!
+}
+
+type Query {
+  foo: String!
+}
+
+enum Result {
+  INVALID_TOKEN
+  NOT_IMPLEMENTED
+  QUEUE_NOT_FOUND
+  SUCCESS
+}
