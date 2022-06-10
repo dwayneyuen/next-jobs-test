@@ -15,5 +15,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: npm install @dwayneyuen/next-jobs-cli
+      - run: npm install --location=global @dwayneyuen/next-jobs-cli
       - run: next-jobs-cli deploy .
