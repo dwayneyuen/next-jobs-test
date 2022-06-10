@@ -4,14 +4,9 @@ type QueueExampleJob = {
   foo: string;
 };
 
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 const QueueExample = JobQueue("queue-example", async (job: QueueExampleJob) => {
-  console.log("[QueueExample.callback] started", job);
-  await delay(5000);
-  console.log("[QueueExample.callback] completed", job);
+  console.log("[QueueExample.callback] processing job:", job);
+  return "Hello world!";
 });
 
 export default QueueExample;
