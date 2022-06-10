@@ -4,6 +4,8 @@ on: [push]
 
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  NEXT_JOBS_ACCESS_TOKEN: "access-token"
+  NEXT_JOBS_SERVER_URL: "52.8.4.166:5678"
 
 jobs:
   deploy-next-jobs:
@@ -13,10 +15,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: npm whoami
-      - run: npm whoami
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm install @dwayneyuen/next-jobs-cli
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: next-jobs deploy .
