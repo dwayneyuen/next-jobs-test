@@ -5,7 +5,7 @@ on: [push]
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   NEXT_JOBS_ACCESS_TOKEN: "access-token"
-  NEXT_JOBS_SERVER_URL: "52.8.4.166:5678"
+  NEXT_JOBS_SERVER_URL: "http://52.8.4.166:5678"
 
 jobs:
   deploy-next-jobs:
